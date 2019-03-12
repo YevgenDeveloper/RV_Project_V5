@@ -1,0 +1,53 @@
+@import 'client/styles/variables';
+
+.control {
+  display: flex;
+  flex-flow: row nowrap;
+  margin-right: 10px;
+}
+
+.button {
+  width: 44px;
+  overflow: hidden;
+  text-indent: -1000px;
+  margin-right: 1px;
+  position: relative;
+
+  &:first-child {
+    border-radius: 4px 0 0 4px;
+  }
+
+  &.on {
+    background-color: $color-blue;
+
+    &:hover:enabled {
+      background-color: color-mod($color-blue l(48%));
+    }
+
+    &:active:enabled {
+      background-color: color-mod($color-blue l(44%));
+    }
+  }
+
+  &:last-child {
+    border-radius: 0 4px 4px 0;
+    margin-left: 0;
+  }
+
+  &.playBack::after {
+    background-image: url('client/assets/icn-play-back.svg');
+    background-position: 45% 50%;
+  }
+
+  &.playForward::after {
+    background-image: url('client/assets/icn-play-forward.svg');
+    background-position: 55% 50%;
+  }
+
+  &.on.playBack::after {
+    background-image: url('client/assets/icn-play-back-white.svg');
+  }
+  &.on.playForward::after {
+    background-image: url('client/assets/icn-play-forward-white.svg');
+  }
+}

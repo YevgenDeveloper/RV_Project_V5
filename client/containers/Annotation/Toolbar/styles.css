@@ -1,0 +1,82 @@
+@import 'client/styles/variables';
+
+.toolbar {
+  z-index: 2;
+  flex-shrink: 0;
+  padding: 10px;
+  display: flex;
+  flex-flow: row nowrap;
+  background-color: black;
+}
+
+.button {
+  flex-shrink: 0;
+  display: block;
+  margin: 0 0 0 10px;
+  min-width: 100px;
+}
+
+.button.cancel {
+  margin-left: auto;
+}
+
+.group {
+  display: flex;
+  flex-flow: row nowrap;
+  margin-right: 10px;
+
+  .button {
+    width: 50px;
+    min-width: 50px;
+    margin: 0 1px 0 0;
+    border-radius: 0;
+    overflow: hidden;
+    text-indent: -1000px;
+  }
+
+  .button:first-child {
+    border-radius: 4px 0 0 4px;
+  }
+
+  .button:last-child {
+    border-radius: 0 4px 4px 0;
+  }
+
+  .button.on,
+  .button.on:hover,
+  .button.on:active {
+    background-color: $color-blue;
+  }
+
+  .button.on::after {
+    opacity: 1;
+  }
+}
+
+.button.pen::after {
+  background-image: url('client/assets/icn-annotation-white.svg');
+}
+
+.button.arrow::after {
+  background-image: url('client/assets/icn-arrow-white.svg');
+}
+
+.button.text::after {
+  background-image: url('client/assets/icn-text-white.svg');
+}
+
+.button.rectangle::after {
+  background-image: url('client/assets/icn-rectangle-white.svg');
+}
+
+.button.circle::after {
+  background-image: url('client/assets/icn-circle-white.svg');
+}
+
+.button.undo::after {
+  background-image: url('client/assets/icn-undo-white.svg');
+}
+
+.button.redo::after {
+  background-image: url('client/assets/icn-redo-white.svg');
+}

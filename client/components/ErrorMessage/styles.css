@@ -1,0 +1,35 @@
+@import 'client/styles/variables';
+
+.message {
+  display: flex;
+  position: relative;
+  width: 100%;
+  margin: auto;
+
+  .inner {
+    margin: auto;
+    padding: 20px;
+    text-align: center;
+  }
+
+  h1 {
+    font-weight: bold;
+    font-size: $font-size-large;
+    color: $color-text-default;
+    margin: 1em 0;
+    user-select: text;
+  }
+
+  p {
+    font-size: $font-size-default;
+    color: $color-red;
+    margin: 2em 0;
+    user-select: text;
+  }
+
+  .button {
+    display: block;
+    margin: 1em auto;
+    font-size: $font-size-default;
+  }
+}

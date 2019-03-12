@@ -1,0 +1,49 @@
+@import 'client/styles/variables';
+
+.timeline {
+  position: relative;
+  display: block;
+  height: 32px;
+  width: 100%;
+  border-radius: 3px;
+  margin: 0 15px;
+
+  &:hover:enabled {
+    cursor: pointer;
+  }
+
+  &::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 0;
+    width: 100%;
+    height: 4px;
+    margin-top: -2px;
+    border-radius: 2px;
+    background-color: rgba(255, 255, 255, 0.3);
+  }
+}
+
+.path {
+  z-index: 1;
+  position: absolute;
+  top: 50%;
+  left: 0;
+  width: 0;
+  height: 4px;
+  margin-top: -2px;
+  border-radius: 2px 0 0 2px;
+  background-color: $color-blue;
+}
+
+.slider {
+  z-index: 2;
+  position: absolute;
+  top: 4px;
+  width: 4px;
+  height: 24px;
+  margin-left: -2px;
+  border-radius: 1px;
+  background-color: white;
+}

@@ -1,0 +1,86 @@
+@import 'client/styles/variables';
+
+.toolbar {
+  display: flex;
+  flex-flow: row nowrap;
+  margin: 0 auto;
+}
+
+.button {
+  width: 58px;
+  margin: 0 1px 0 0;
+  border-radius: 0;
+  overflow: hidden;
+  text-indent: -1000px;
+
+  &:nth-child(2) {
+    border-radius: 4px 0 0 4px;
+  }
+
+  &:last-child {
+    border-radius: 0 4px 4px 0;
+    margin-left: 0;
+  }
+
+  &.ride {
+    width: 150px;
+    border-radius: 4px;
+    text-indent: 0;
+    margin: 0 5px 0 0;
+    padding: 0 15px;
+    font-size: $font-size-small;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  &.on {
+    background-color: $color-blue;
+
+    &:hover:enabled {
+      background-color: color-mod($color-blue l(48%));
+    }
+
+    &:active:enabled {
+      background-color: color-mod($color-blue l(44%));
+    }
+
+    &::after {
+      opacity: 1;
+    }
+
+    &.annotation::after {
+      background-image: url('client/assets/icn-annotation-white.svg');
+    }
+    &.comparison::after {
+      background-image: url('client/assets/icn-comparison-white.svg');
+    }
+    &.measurement::after {
+      background-image: url('client/assets/icn-measurement-white.svg');
+    }
+  }
+
+  &.annotation::after {
+    background-image: url('client/assets/icn-annotation.svg');
+  }
+
+  &.comparison::after {
+    background-image: url('client/assets/icn-comparison.svg');
+  }
+
+  &.measurement::after {
+    background-image: url('client/assets/icn-measurement.svg');
+  }
+
+  &.download::after {
+    background-image: url('client/assets/icn-download.svg');
+  }
+
+  &.bookmark::after {
+    background-image: url('client/assets/icn-bookmark-outline.svg');
+  }
+
+  &.bookmark.bookmarked::after {
+    background-image: url('client/assets/icn-bookmark.svg');
+  }
+}

@@ -1,0 +1,33 @@
+[ignore]
+<PROJECT_ROOT>/coverage/.*
+<PROJECT_ROOT>/node_modules/.*
+<PROJECT_ROOT>/.*/__tests__/.*
+
+[include]
+
+[libs]
+flow-typed
+config/flow/definitions
+
+[lints]
+
+[options]
+emoji=true
+
+esproposal.class_static_fields=enable
+esproposal.class_instance_fields=enable
+esproposal.optional_chaining=enable
+esproposal.decorators=ignore
+esproposal.export_star_as=enable
+
+munge_underscores=false
+
+module.name_mapper='^.*\.css$' -> '<PROJECT_ROOT>/config/flow/stubs/CSSModules.js.flow'
+module.name_mapper='^client\/\(.*\)$' -> '<PROJECT_ROOT>/client/\1'
+
+suppress_type=$FlowFixMe
+
+suppress_comment=\\(.\\|\n\\)*\\$FlowFixMe
+
+[strict]
+

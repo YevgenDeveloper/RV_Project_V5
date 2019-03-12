@@ -1,0 +1,40 @@
+@import 'client/styles/variables';
+
+.bookmark {
+  display: flex;
+  flex-flow: row nowrap;
+  margin-bottom: 20px;
+  width: 100%;
+  max-width: 400px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  height: 60px;
+  text-align: left;
+  font-size: $font-size-default;
+
+  &:hover {
+    cursor: pointer;
+  }
+}
+
+.image {
+  display: block;
+  flex-shrink: 0;
+  width: auto;
+  height: 50px;
+  margin-right: 15px;
+}
+
+.info {
+  width: 100%;
+  max-width: 400px;
+  margin-bottom: 3px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  user-select: text;
+  * {
+    user-select: text;
+  }
+}

@@ -1,0 +1,64 @@
+@import 'client/styles/variables';
+
+.loader {
+  z-index: 100;
+  margin: auto;
+  position: relative;
+  display: block;
+}
+
+.loaderSpinner {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin: -25px 0 0 -25px;
+  width: 50px;
+  height: 50px;
+
+  &::before {
+    content: '';
+    display: block;
+    padding-top: 100%;
+  }
+}
+
+.loaderCircular {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+  transform-origin: center center;
+  animation: loaderCircular 1.8s linear infinite;
+}
+
+.loaderPath {
+  stroke-dasharray: 1, 200;
+  stroke-dashoffset: 0;
+  stroke-linecap: round;
+  stroke: $color-blue;
+  animation: loaderPath 0.9s ease-in-out infinite;
+}
+
+@keyframes loaderCircular {
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes loaderPath {
+  0% {
+    stroke-dasharray: 1, 200;
+    stroke-dashoffset: 0;
+  }
+
+  50% {
+    stroke-dasharray: 89, 200;
+    stroke-dashoffset: -35;
+  }
+
+  100% {
+    stroke-dasharray: 89, 200;
+    stroke-dashoffset: -124;
+  }
+}

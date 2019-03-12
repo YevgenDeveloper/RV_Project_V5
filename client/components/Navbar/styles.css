@@ -1,0 +1,35 @@
+@import 'client/styles/variables';
+
+.navbar {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  height: $topbar-height;
+}
+
+.box {
+  display: flex;
+  flex: 1;
+  &:last-child {
+    justify-content: flex-end;
+  }
+}
+
+.button {
+  margin-left: 5px;
+  overflow: hidden;
+  width: 58px;
+  text-indent: -1000px;
+
+  &.help::after {
+    background-image: url('client/assets/icn-help.svg');
+  }
+
+  &.bookmarks::after {
+    background-image: url('client/assets/icn-bookmarks.svg');
+  }
+
+  &.logout::after {
+    background-image: url('client/assets/icn-logout.svg');
+  }
+}

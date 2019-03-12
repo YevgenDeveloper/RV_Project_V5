@@ -1,0 +1,15 @@
+// @flow
+
+export const REQUEST = 'REQUEST';
+export const FAILURE = 'FAILURE';
+export const LOAD = 'LOAD';
+export const MODAL_OPEN = 'MODAL_OPEN';
+export const MODAL_CLOSE = 'MODAL_CLOSE';
+export const NOTIFICATION_SHOW = 'NOTIFICATION_SHOW';
+export const NOTIFICATION_HIDE = 'NOTIFICATION_HIDE';
+export const RIDE_CHANGE = 'RIDE_CHANGE';
+export const VIEW_CHANGE = 'VIEW_CHANGE';
+export const PLAYER_UPDATE = 'PLAYER_UPDATE';
+export const BOOKMARK = 'BOOKMARK';
+export const ANNOTATION_TOOL_CHANGE = 'ANNOTATION_TOOL_CHANGE';
+export const ANNOTATION_IMAGE_CHANGE = 'ANNOTATION_IMAGE_CHANGE';

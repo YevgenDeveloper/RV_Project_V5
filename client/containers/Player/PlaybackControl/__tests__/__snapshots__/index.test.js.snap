@@ -1,0 +1,165 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders correctly 1`] = `
+ShallowWrapper {
+  Symbol(enzyme.__root__): [Circular],
+  Symbol(enzyme.__unrendered__): <PlaybackControl
+    disabled={false}
+    disabledBack={false}
+    disabledForward={false}
+    onClickPlayBack={[MockFunction]}
+    onClickPlayForward={[MockFunction]}
+  />,
+  Symbol(enzyme.__renderer__): Object {
+    "batchedUpdates": [Function],
+    "getNode": [Function],
+    "render": [Function],
+    "simulateError": [Function],
+    "simulateEvent": [Function],
+    "unmount": [Function],
+  },
+  Symbol(enzyme.__node__): Object {
+    "instance": null,
+    "key": undefined,
+    "nodeType": "host",
+    "props": Object {
+      "children": Array [
+        <Button
+          blue={false}
+          className="button playBack"
+          dark={false}
+          disabled={false}
+          label="Play Back"
+          onClick={[MockFunction]}
+        />,
+        <Button
+          blue={false}
+          className="button playForward"
+          dark={false}
+          disabled={false}
+          label="Play Forward"
+          onClick={[MockFunction]}
+        />,
+      ],
+      "className": "control",
+    },
+    "ref": null,
+    "rendered": Array [
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "function",
+        "props": Object {
+          "blue": false,
+          "className": "button playBack",
+          "dark": false,
+          "disabled": false,
+          "label": "Play Back",
+          "onClick": [MockFunction],
+        },
+        "ref": null,
+        "rendered": null,
+        "type": [Function],
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "function",
+        "props": Object {
+          "blue": false,
+          "className": "button playForward",
+          "dark": false,
+          "disabled": false,
+          "label": "Play Forward",
+          "onClick": [MockFunction],
+        },
+        "ref": null,
+        "rendered": null,
+        "type": [Function],
+      },
+    ],
+    "type": "div",
+  },
+  Symbol(enzyme.__nodes__): Array [
+    Object {
+      "instance": null,
+      "key": undefined,
+      "nodeType": "host",
+      "props": Object {
+        "children": Array [
+          <Button
+            blue={false}
+            className="button playBack"
+            dark={false}
+            disabled={false}
+            label="Play Back"
+            onClick={[MockFunction]}
+          />,
+          <Button
+            blue={false}
+            className="button playForward"
+            dark={false}
+            disabled={false}
+            label="Play Forward"
+            onClick={[MockFunction]}
+          />,
+        ],
+        "className": "control",
+      },
+      "ref": null,
+      "rendered": Array [
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "function",
+          "props": Object {
+            "blue": false,
+            "className": "button playBack",
+            "dark": false,
+            "disabled": false,
+            "label": "Play Back",
+            "onClick": [MockFunction],
+          },
+          "ref": null,
+          "rendered": null,
+          "type": [Function],
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "function",
+          "props": Object {
+            "blue": false,
+            "className": "button playForward",
+            "dark": false,
+            "disabled": false,
+            "label": "Play Forward",
+            "onClick": [MockFunction],
+          },
+          "ref": null,
+          "rendered": null,
+          "type": [Function],
+        },
+      ],
+      "type": "div",
+    },
+  ],
+  Symbol(enzyme.__options__): Object {
+    "adapter": ReactSixteenAdapter {
+      "options": Object {
+        "enableComponentDidUpdateOnSetState": true,
+        "lifecycles": Object {
+          "componentDidUpdate": Object {
+            "onSetState": true,
+          },
+          "getDerivedStateFromProps": true,
+          "getSnapshotBeforeUpdate": true,
+          "setState": Object {
+            "skipsComponentDidUpdateOnNullish": true,
+          },
+        },
+      },
+    },
+  },
+}
+`;

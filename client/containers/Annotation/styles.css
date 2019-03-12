@@ -1,0 +1,64 @@
+@import 'client/styles/variables';
+
+.container {
+  z-index: 1000;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: black;
+  display: flex;
+  flex-flow: column nowrap;
+  animation: container 0.3s;
+}
+
+.canvas {
+  z-index: 1;
+  flex-shrink: 0;
+  display: flex;
+  position: relative;
+  width: 100%;
+  height: 100%;
+
+  .base {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    background: black;
+  }
+
+  .draw {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 2;
+  }
+}
+
+.textarea {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 3;
+  background: transparent;
+  border: 1px dotted;
+  line-height: 25px;
+  word-wrap: break-word;
+  outline-width: 0;
+  overflow: hidden;
+  padding: 0;
+}
+
+@keyframes container {
+  0% {
+    opacity: 0;
+    transform: translateY(50px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

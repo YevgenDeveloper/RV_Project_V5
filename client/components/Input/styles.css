@@ -1,0 +1,23 @@
+@import 'client/styles/variables';
+
+.input {
+  height: 32px;
+  display: block;
+  min-width: 240px;
+  font-size: $font-size-default;
+  background-color: white;
+  margin-bottom: 20px;
+  user-select: auto;
+  border-radius: 4px;
+  padding: 8px;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+
+  &:focus {
+    border-color: $color-blue;
+    box-shadow: 0 0 0 2px $color-blue;
+  }
+
+  &:read-only {
+    background-color: color-mod($color-blue a(5%));
+  }
+}

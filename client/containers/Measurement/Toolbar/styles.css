@@ -1,0 +1,23 @@
+@import 'client/styles/variables';
+
+.toolbar {
+  z-index: 2;
+  flex-shrink: 0;
+  padding: 10px;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  align-items: center;
+  background-color: black;
+}
+
+.distance {
+  font-size: $font-size-default;
+  color: white;
+}
+
+.button {
+  flex-shrink: 0;
+  display: block;
+  min-width: 100px;
+}

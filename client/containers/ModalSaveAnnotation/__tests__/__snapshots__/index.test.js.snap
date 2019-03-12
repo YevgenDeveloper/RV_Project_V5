@@ -1,0 +1,297 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders correctly 1`] = `
+ShallowWrapper {
+  Symbol(enzyme.__root__): [Circular],
+  Symbol(enzyme.__unrendered__): <ModalSaveAnnotation
+    close={[MockFunction]}
+    image="Test"
+    onClickSave={[MockFunction]}
+  />,
+  Symbol(enzyme.__renderer__): Object {
+    "batchedUpdates": [Function],
+    "getNode": [Function],
+    "render": [Function],
+    "simulateError": [Function],
+    "simulateEvent": [Function],
+    "unmount": [Function],
+  },
+  Symbol(enzyme.__node__): Object {
+    "instance": null,
+    "key": undefined,
+    "nodeType": "class",
+    "props": Object {
+      "children": Array [
+        <h1>
+          Save annotation
+        </h1>,
+        <img
+          alt=""
+          className="image"
+          src="Test"
+        />,
+        <div
+          className="buttons"
+        >
+          <Button
+            blue={false}
+            className="button"
+            dark={false}
+            disabled={false}
+            label="Cancel"
+            onClick={[Function]}
+          />
+          <Button
+            blue={true}
+            className="button"
+            dark={false}
+            disabled={false}
+            label="Save"
+            onClick={[Function]}
+          />
+        </div>,
+      ],
+      "className": undefined,
+      "close": [MockFunction],
+    },
+    "ref": null,
+    "rendered": Array [
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": "Save annotation",
+        },
+        "ref": null,
+        "rendered": "Save annotation",
+        "type": "h1",
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "alt": "",
+          "className": "image",
+          "src": "Test",
+        },
+        "ref": null,
+        "rendered": null,
+        "type": "img",
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": Array [
+            <Button
+              blue={false}
+              className="button"
+              dark={false}
+              disabled={false}
+              label="Cancel"
+              onClick={[Function]}
+            />,
+            <Button
+              blue={true}
+              className="button"
+              dark={false}
+              disabled={false}
+              label="Save"
+              onClick={[Function]}
+            />,
+          ],
+          "className": "buttons",
+        },
+        "ref": null,
+        "rendered": Array [
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "function",
+            "props": Object {
+              "blue": false,
+              "className": "button",
+              "dark": false,
+              "disabled": false,
+              "label": "Cancel",
+              "onClick": [Function],
+            },
+            "ref": null,
+            "rendered": null,
+            "type": [Function],
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "function",
+            "props": Object {
+              "blue": true,
+              "className": "button",
+              "dark": false,
+              "disabled": false,
+              "label": "Save",
+              "onClick": [Function],
+            },
+            "ref": null,
+            "rendered": null,
+            "type": [Function],
+          },
+        ],
+        "type": "div",
+      },
+    ],
+    "type": [Function],
+  },
+  Symbol(enzyme.__nodes__): Array [
+    Object {
+      "instance": null,
+      "key": undefined,
+      "nodeType": "class",
+      "props": Object {
+        "children": Array [
+          <h1>
+            Save annotation
+          </h1>,
+          <img
+            alt=""
+            className="image"
+            src="Test"
+          />,
+          <div
+            className="buttons"
+          >
+            <Button
+              blue={false}
+              className="button"
+              dark={false}
+              disabled={false}
+              label="Cancel"
+              onClick={[Function]}
+            />
+            <Button
+              blue={true}
+              className="button"
+              dark={false}
+              disabled={false}
+              label="Save"
+              onClick={[Function]}
+            />
+          </div>,
+        ],
+        "className": undefined,
+        "close": [MockFunction],
+      },
+      "ref": null,
+      "rendered": Array [
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": "Save annotation",
+          },
+          "ref": null,
+          "rendered": "Save annotation",
+          "type": "h1",
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "alt": "",
+            "className": "image",
+            "src": "Test",
+          },
+          "ref": null,
+          "rendered": null,
+          "type": "img",
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": Array [
+              <Button
+                blue={false}
+                className="button"
+                dark={false}
+                disabled={false}
+                label="Cancel"
+                onClick={[Function]}
+              />,
+              <Button
+                blue={true}
+                className="button"
+                dark={false}
+                disabled={false}
+                label="Save"
+                onClick={[Function]}
+              />,
+            ],
+            "className": "buttons",
+          },
+          "ref": null,
+          "rendered": Array [
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "function",
+              "props": Object {
+                "blue": false,
+                "className": "button",
+                "dark": false,
+                "disabled": false,
+                "label": "Cancel",
+                "onClick": [Function],
+              },
+              "ref": null,
+              "rendered": null,
+              "type": [Function],
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "function",
+              "props": Object {
+                "blue": true,
+                "className": "button",
+                "dark": false,
+                "disabled": false,
+                "label": "Save",
+                "onClick": [Function],
+              },
+              "ref": null,
+              "rendered": null,
+              "type": [Function],
+            },
+          ],
+          "type": "div",
+        },
+      ],
+      "type": [Function],
+    },
+  ],
+  Symbol(enzyme.__options__): Object {
+    "adapter": ReactSixteenAdapter {
+      "options": Object {
+        "enableComponentDidUpdateOnSetState": true,
+        "lifecycles": Object {
+          "componentDidUpdate": Object {
+            "onSetState": true,
+          },
+          "getDerivedStateFromProps": true,
+          "getSnapshotBeforeUpdate": true,
+          "setState": Object {
+            "skipsComponentDidUpdateOnNullish": true,
+          },
+        },
+      },
+    },
+  },
+}
+`;

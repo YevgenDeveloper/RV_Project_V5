@@ -1,0 +1,78 @@
+@import 'client/styles/variables';
+
+.button {
+  position: relative;
+  height: 32px;
+  margin: 0;
+  padding: 0 20px;
+  border-radius: 4px;
+  text-align: center;
+  font-size: $font-size-default;
+  font-weight: bold;
+  color: $color-text-default;
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+  background-color: $color-background;
+  transition: background-color 0.1s;
+
+  &::after {
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0.6;
+    content: '';
+    width: 100%;
+    height: 100%;
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+    transition: opacity 0.1s;
+  }
+
+  &:disabled {
+    color: $color-text-disabled;
+    &::after {
+      opacity: 0.2;
+    }
+  }
+
+  &:hover:enabled {
+    cursor: pointer;
+    background-color: color-mod($color-background l(90%));
+    &::after {
+      opacity: 0.8;
+    }
+  }
+
+  &:active:enabled {
+    background-color: color-mod($color-background l(85%));
+    &::after {
+      opacity: 0.6;
+    }
+  }
+
+  &.blue {
+    color: white;
+    background-color: $color-blue;
+
+    &:hover:enabled {
+      background-color: color-mod($color-blue l(48%));
+    }
+
+    &:active:enabled {
+      background-color: color-mod($color-blue l(44%));
+    }
+  }
+
+  &.dark {
+    color: white;
+    background-color: #323232;
+
+    &:hover:enabled {
+      background-color: #373737;
+    }
+
+    &:active:enabled {
+      background-color: #2d2d2d;
+    }
+  }
+}

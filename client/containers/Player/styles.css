@@ -1,0 +1,54 @@
+@import 'client/styles/variables';
+
+.player {
+  width: 100%;
+  height: calc(100% - $topbar-height);
+  border-radius: 6px;
+  padding: 10px;
+  background-color: #333;
+  display: flex;
+  flex-flow: column wrap;
+
+  &:first-child {
+    margin-right: 5px;
+  }
+
+  &:last-child {
+    margin-right: 0;
+  }
+}
+
+.controls {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
+
+.preview {
+  width: 100%;
+  flex: 1;
+  display: flex;
+  overflow: hidden;
+}
+
+.image {
+  width: 100%;
+  height: auto;
+  margin: auto;
+  display: block;
+  border-radius: 4px;
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+  animation: image-on 0.3s;
+}
+
+@keyframes image-on {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}

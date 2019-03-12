@@ -1,0 +1,12 @@
+{
+  "compilerOptions": {
+    "baseUrl": ".",
+    "target": "es6",
+    "module": "commonjs",
+    "experimentalDecorators": true,
+    "paths": {
+      "client/*": ["client/*"],
+      "config/*": ["config/*"]
+    }
+  }
+}

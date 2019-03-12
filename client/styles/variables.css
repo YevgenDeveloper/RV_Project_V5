@@ -1,0 +1,15 @@
+$color-blue: #147efb;
+$color-green: #59e45e;
+$color-red: #ec5151;
+$color-background: #eaedf0;
+
+$color-text-default: rgba(0, 0, 0, 0.8);
+$color-text-disabled: rgba(0, 0, 0, 0.3);
+
+$color-fade: rgba(0, 0, 0, 0.5);
+
+$font-size-small: 12px;
+$font-size-default: 14px;
+$font-size-large: 24px;
+
+$topbar-height: 52px;

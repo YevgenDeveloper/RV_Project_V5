@@ -1,0 +1,350 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders correctly 1`] = `
+ShallowWrapper {
+  Symbol(enzyme.__root__): [Circular],
+  Symbol(enzyme.__unrendered__): <Player
+    disabled={false}
+    player={
+      Object {
+        "camera": "Test",
+        "currentImage": 0,
+        "playMode": "Test",
+      }
+    }
+  />,
+  Symbol(enzyme.__renderer__): Object {
+    "batchedUpdates": [Function],
+    "getNode": [Function],
+    "render": [Function],
+    "simulateError": [Function],
+    "simulateEvent": [Function],
+    "unmount": [Function],
+  },
+  Symbol(enzyme.__node__): Object {
+    "instance": null,
+    "key": undefined,
+    "nodeType": "host",
+    "props": Object {
+      "children": Array [
+        <div
+          className="controls"
+        >
+          <CameraControl
+            camera="Test"
+            onChangeCamera={[Function]}
+          />
+          <PlaybackControl
+            disabledBack={true}
+            disabledForward={true}
+            onClickPlayBack={[Function]}
+            onClickPlayForward={[Function]}
+            playMode="Test"
+          />
+          <TimelineControl
+            currentImage={0}
+            onChangeImage={[Function]}
+            totalImages={0}
+          />
+        </div>,
+        <button
+          className="preview"
+          onClick={[Function]}
+          type="button"
+        >
+          <img
+            alt=""
+            className="image"
+            onError={[Function]}
+            onLoad={[Function]}
+          />
+        </button>,
+      ],
+      "className": "player",
+    },
+    "ref": null,
+    "rendered": Array [
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": Array [
+            <CameraControl
+              camera="Test"
+              onChangeCamera={[Function]}
+            />,
+            <PlaybackControl
+              disabledBack={true}
+              disabledForward={true}
+              onClickPlayBack={[Function]}
+              onClickPlayForward={[Function]}
+              playMode="Test"
+            />,
+            <TimelineControl
+              currentImage={0}
+              onChangeImage={[Function]}
+              totalImages={0}
+            />,
+          ],
+          "className": "controls",
+        },
+        "ref": null,
+        "rendered": Array [
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "function",
+            "props": Object {
+              "camera": "Test",
+              "disabled": undefined,
+              "onChangeCamera": [Function],
+            },
+            "ref": null,
+            "rendered": null,
+            "type": [Function],
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "function",
+            "props": Object {
+              "disabled": undefined,
+              "disabledBack": true,
+              "disabledForward": true,
+              "onClickPlayBack": [Function],
+              "onClickPlayForward": [Function],
+              "playMode": "Test",
+            },
+            "ref": null,
+            "rendered": null,
+            "type": [Function],
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "class",
+            "props": Object {
+              "currentImage": 0,
+              "disabled": undefined,
+              "onChangeImage": [Function],
+              "totalImages": 0,
+            },
+            "ref": null,
+            "rendered": null,
+            "type": [Function],
+          },
+        ],
+        "type": "div",
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": <img
+            alt=""
+            className="image"
+            onError={[Function]}
+            onLoad={[Function]}
+          />,
+          "className": "preview",
+          "disabled": undefined,
+          "onClick": [Function],
+          "type": "button",
+        },
+        "ref": null,
+        "rendered": Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "alt": "",
+            "className": "image",
+            "onError": [Function],
+            "onLoad": [Function],
+            "src": undefined,
+          },
+          "ref": null,
+          "rendered": null,
+          "type": "img",
+        },
+        "type": "button",
+      },
+    ],
+    "type": "div",
+  },
+  Symbol(enzyme.__nodes__): Array [
+    Object {
+      "instance": null,
+      "key": undefined,
+      "nodeType": "host",
+      "props": Object {
+        "children": Array [
+          <div
+            className="controls"
+          >
+            <CameraControl
+              camera="Test"
+              onChangeCamera={[Function]}
+            />
+            <PlaybackControl
+              disabledBack={true}
+              disabledForward={true}
+              onClickPlayBack={[Function]}
+              onClickPlayForward={[Function]}
+              playMode="Test"
+            />
+            <TimelineControl
+              currentImage={0}
+              onChangeImage={[Function]}
+              totalImages={0}
+            />
+          </div>,
+          <button
+            className="preview"
+            onClick={[Function]}
+            type="button"
+          >
+            <img
+              alt=""
+              className="image"
+              onError={[Function]}
+              onLoad={[Function]}
+            />
+          </button>,
+        ],
+        "className": "player",
+      },
+      "ref": null,
+      "rendered": Array [
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": Array [
+              <CameraControl
+                camera="Test"
+                onChangeCamera={[Function]}
+              />,
+              <PlaybackControl
+                disabledBack={true}
+                disabledForward={true}
+                onClickPlayBack={[Function]}
+                onClickPlayForward={[Function]}
+                playMode="Test"
+              />,
+              <TimelineControl
+                currentImage={0}
+                onChangeImage={[Function]}
+                totalImages={0}
+              />,
+            ],
+            "className": "controls",
+          },
+          "ref": null,
+          "rendered": Array [
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "function",
+              "props": Object {
+                "camera": "Test",
+                "disabled": undefined,
+                "onChangeCamera": [Function],
+              },
+              "ref": null,
+              "rendered": null,
+              "type": [Function],
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "function",
+              "props": Object {
+                "disabled": undefined,
+                "disabledBack": true,
+                "disabledForward": true,
+                "onClickPlayBack": [Function],
+                "onClickPlayForward": [Function],
+                "playMode": "Test",
+              },
+              "ref": null,
+              "rendered": null,
+              "type": [Function],
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "class",
+              "props": Object {
+                "currentImage": 0,
+                "disabled": undefined,
+                "onChangeImage": [Function],
+                "totalImages": 0,
+              },
+              "ref": null,
+              "rendered": null,
+              "type": [Function],
+            },
+          ],
+          "type": "div",
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": <img
+              alt=""
+              className="image"
+              onError={[Function]}
+              onLoad={[Function]}
+            />,
+            "className": "preview",
+            "disabled": undefined,
+            "onClick": [Function],
+            "type": "button",
+          },
+          "ref": null,
+          "rendered": Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "alt": "",
+              "className": "image",
+              "onError": [Function],
+              "onLoad": [Function],
+              "src": undefined,
+            },
+            "ref": null,
+            "rendered": null,
+            "type": "img",
+          },
+          "type": "button",
+        },
+      ],
+      "type": "div",
+    },
+  ],
+  Symbol(enzyme.__options__): Object {
+    "adapter": ReactSixteenAdapter {
+      "options": Object {
+        "enableComponentDidUpdateOnSetState": true,
+        "lifecycles": Object {
+          "componentDidUpdate": Object {
+            "onSetState": true,
+          },
+          "getDerivedStateFromProps": true,
+          "getSnapshotBeforeUpdate": true,
+          "setState": Object {
+            "skipsComponentDidUpdateOnNullish": true,
+          },
+        },
+      },
+    },
+  },
+}
+`;
