@@ -6,10 +6,9 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
 import { purgeStoredState } from 'redux-persist';
-
 import { persistConfig } from 'client/store/persist';
 import { views, modals } from 'client/constants';
-import { getImageUrl } from 'client/services';
+import { getImageUrl, getImageGateUrl } from 'client/services';
 import {
   Annotation,
   Measurement,
@@ -108,11 +107,13 @@ class App extends Component<Props, State> {
       ? getImageUrl(currentRide, players[0].camera, imageName)
       : undefined;
 
+    const imageGateUrl = getImageGateUrl(imageUrl);
+    console.log(imageGateUrl);
     switch (view) {
       case views.ANNOTATION:
         return (
           <Annotation
-            imageUrl={imageUrl}
+            imageUrl={imageGateUrl}
             drawTool={this.props.drawTool}
             drawColor={this.props.drawColor}
             drawLineWidth={this.props.drawLineWidth}
@@ -126,7 +127,7 @@ class App extends Component<Props, State> {
       case views.MEASUREMENT:
         return (
           <Measurement
-            imageUrl={imageUrl}
+            imageUrl={imageGateUrl}
             onClickClose={this.props.changeView}
           />
         );
