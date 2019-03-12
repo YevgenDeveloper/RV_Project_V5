@@ -1,6 +1,6 @@
 // @flow
 
-import { storageNames, googleStorageUrl } from 'client/constants';
+import { storageNames, googleStorageUrl, imageGateUrl } from 'client/constants';
 
 export function checkAndUpdateAppVersion(): boolean {
   const currentVersion = process.env.APP_VERSION || '';
@@ -44,12 +44,15 @@ export async function getImagesFromCamera(ride: string, camera: string) {
   if (!text) {
     return [];
   }
-
   return text.split('|');
 }
 
 export function getImageUrl(ride: string, camera: string, image: string) {
   return `${googleStorageUrl}/${ride}/${camera}/${image}`;
+}
+
+export function getImageGateUrl(imageUrl: string) {
+  return `${imageGateUrl}?url=${encodeURIComponent(imageUrl)}`;
 }
 
 export function getStartCoords(

@@ -4,7 +4,11 @@ import type { Dispatch, GetState } from 'client/types';
 
 import download from 'downloadjs';
 
-import { getImagesFromCamera, getImageUrl } from 'client/services';
+import {
+  getImagesFromCamera,
+  getImageUrl,
+  getImageGateUrl,
+} from 'client/services';
 import { modals, cameras, playModes, views } from 'client/constants';
 import * as types from './actionTypes';
 
@@ -106,7 +110,10 @@ export const downloadImage = () => async (
     const { images, players, currentRide } = getState();
     const image = images[players[0].camera][players[0].currentImage];
 
-    download(getImageUrl(currentRide, players[0].camera, image));
+    const imageUrl = getImageUrl(currentRide, players[0].camera, image);
+    const response = await fetch(getImageGateUrl(imageUrl));
+    const imageBlob = await response.blob();
+    download(imageBlob, image, response.headers.get('content-type'));
   } catch (error) {
     console.error(error);
     dispatch({
