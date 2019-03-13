@@ -80,6 +80,10 @@
     background-image: url('client/assets/icn-bookmark-outline.svg');
   }
 
+  &.aliases::after {
+    background-image: url('client/assets/icn-bookmark-outline.svg');
+  }
+
   &.bookmark.bookmarked::after {
     background-image: url('client/assets/icn-bookmark.svg');
   }

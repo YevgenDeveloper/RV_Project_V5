@@ -18,6 +18,7 @@ type Props = {
   onClickAnnotation: void => void,
   onClickDownload: void => void,
   onClickBookmark: void => void,
+  onClickAliases: void => void,
   onClickRide: void => void,
 };
 
@@ -67,6 +68,12 @@ const Toolbar = (props: Props) => (
         [styles.bookmarked]: props.isBookmarked,
       })}
       onClick={() => props.onClickBookmark()}
+      disabled={props.disabled}
+    />
+    <Button
+      label="Aliases"
+      className={cx(styles.button, styles.aliases)}
+      onClick={() => props.onClickAliases()}
       disabled={props.disabled}
     />
   </div>
