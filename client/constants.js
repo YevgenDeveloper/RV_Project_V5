@@ -8,6 +8,7 @@ export const storageNames = {
 
 export const modals = {
   RIDES: 'Modal/RIDES',
+  ALIASES: 'Modal/ALIASES',
   WHATS_NEW: 'Modal/WHATS_NEW',
   BOOKMARKS: 'Modal/BOOKMARKS',
   SAVE_ANNOTATION: 'Modal/SAVE_ANNOTATION',

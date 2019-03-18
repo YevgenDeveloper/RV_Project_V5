@@ -13,6 +13,7 @@ import {
   Annotation,
   Measurement,
   ModalRides,
+  ModalAliases,
   ModalBookmarks,
   ModalWhatsNew,
   Player,
@@ -59,6 +60,8 @@ class App extends Component<Props, State> {
           />
         );
 
+      case modals.ALIASES:
+        return <ModalAliases close={this.props.toggleModal} />;
       case modals.BOOKMARKS:
         return (
           <ModalBookmarks

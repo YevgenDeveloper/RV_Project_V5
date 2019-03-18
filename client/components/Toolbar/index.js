@@ -73,7 +73,7 @@ const Toolbar = (props: Props) => (
     <Button
       label="Aliases"
       className={cx(styles.button, styles.aliases)}
-      onClick={() => props.onClickAliases()}
+      onClick={props.onClickAliases}
       disabled={props.disabled}
     />
   </div>

@@ -45,6 +45,7 @@ const Navbar = (props: Props) => {
         onClickDownload={props.downloadImage}
         onClickBookmark={props.toogleBookmark}
         onClickRide={() => props.toggleModal(modals.RIDES)}
+        onClickAliases={() => props.toggleModal(modals.ALIASES)}
         isBookmarked={isBookmarked}
         disabled={props.isLoading}
       />

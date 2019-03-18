@@ -7,6 +7,7 @@ export { default as Main } from './Main';
 export { default as Measurement } from './Measurement';
 export { default as ModalBookmarks } from './ModalBookmarks';
 export { default as ModalRides } from './ModalRides';
+export { default as ModalAliases } from './ModalAliases';
 export { default as ModalSaveAnnotation } from './ModalSaveAnnotation';
 export { default as ModalWhatsNew } from './ModalWhatsNew';
 export { default as Player } from './Player';
