@@ -46,4 +46,5 @@ export const drawTools = {
 };
 
 export const googleStorageUrl = 'https://storage.googleapis.com/railview';
-export const imageGateUrl = 'https://railvieweu.dev-test.pro/gate.php';
+export const imageGateUrl = 'https://railvieweu.dev-test.pro/backend/gate.php';
+export const bdConnect = 'https://railvieweu.dev-test.pro/backend/databaselogic.php';

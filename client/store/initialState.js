@@ -10,7 +10,7 @@ const initialState: StateType = {
   modal: undefined,
   notification: undefined,
   view: undefined,
-  rides: ['Ehv_Ut_280318', 'Ledn_Wd'],
+  rides: ['Ehv_Ut_280318', 'Ledn_Wd', 'Sdm_Vh', 'Gd_Apn'],
   currentRide: 'Ledn_Wd',
   players: [
     {
