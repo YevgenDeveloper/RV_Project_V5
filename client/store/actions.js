@@ -8,6 +8,7 @@ import {
   getImagesFromCamera,
   getImageUrl,
   getImageGateUrl,
+  getRidesList,
 } from 'client/services';
 import { modals, cameras, playModes, views } from 'client/constants';
 import * as types from './actionTypes';
@@ -89,6 +90,25 @@ export const changeRide = (payload: string) => (dispatch: Dispatch) => {
   dispatch({ type: types.RIDE_CHANGE, payload });
   dispatch(toggleModal());
   dispatch(load());
+};
+
+export const getRides = () => async (dispatch: Dispatch) => {
+  try {
+    dispatch({ type: types.REQUEST });
+    const payload = {
+      rides: await getRidesList(),
+    };
+    dispatch({
+      type: types.LOAD_RIDES,
+      payload,
+    });
+  } catch (error) {
+    console.error(error);
+    dispatch({
+      type: types.FAILURE,
+      errorMessage: `${error.name}: ${error.message}`,
+    });
+  }
 };
 
 export const changeView = (payload: ?string) => ({

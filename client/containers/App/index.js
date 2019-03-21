@@ -42,6 +42,7 @@ class App extends Component<Props, State> {
 
   componentDidMount() {
     this.props.load();
+    this.props.getRides();
   }
 
   componentWillUnmount() {

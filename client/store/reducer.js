@@ -116,6 +116,15 @@ const reducerBookmark = (
   };
 };
 
+const reducerLoadRides = (
+  state: StateType,
+  action: { payload: { rides: string[] } },
+) => ({
+  ...state,
+  ...action.payload,
+  isLoading: false,
+});
+
 const reducerAnnotationTool = (
   state: StateType,
   action: { payload: { drawTool: string } },
@@ -136,6 +145,7 @@ export default createReducer({
   [types.REQUEST]: reducerRequest,
   [types.FAILURE]: reducerFailure,
   [types.LOAD]: reducerLoad,
+  [types.LOAD_RIDES]: reducerLoadRides,
   [types.MODAL_OPEN]: reducerModal,
   [types.MODAL_CLOSE]: reducerModal,
   [types.NOTIFICATION_SHOW]: reducerNotification,

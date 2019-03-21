@@ -27,6 +27,18 @@ export function logout() {
   localStorage.removeItem(storageNames.AUTH_TOKEN);
 }
 
+export async function getRidesList() {
+  const res = await fetch(`https://www.railview.eu/viewer/getImageList.php`, {
+    method: 'GET',
+    headers: {
+      Accept: 'application/json',
+      'Content-Type': 'application/json',
+    },
+  });
+  const result = await res;
+  return result;
+}
+
 export async function getImagesFromCamera(ride: string, camera: string) {
   const res = await fetch(
     `https://www.railview.eu/viewer/getImageList.php?tableName=${ride}__${camera}`,
