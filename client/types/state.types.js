@@ -10,6 +10,7 @@ export type StateType = {
   errorMessage?: string,
   view?: string,
   rides: string[],
+  aliases: string[],
   currentRide: string,
   players: PlayerType[],
   images: {

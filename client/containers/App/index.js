@@ -62,7 +62,12 @@ class App extends Component<Props, State> {
         );
 
       case modals.ALIASES:
-        return <ModalAliases close={this.props.toggleModal} />;
+        return (
+          <ModalAliases
+            aliases={this.props.aliases}
+            close={this.props.toggleModal}
+          />
+        );
       case modals.BOOKMARKS:
         return (
           <ModalBookmarks

@@ -1,9 +1,6 @@
 <?php
 
-$servername = "localhost";
-$username   = "pmauser";
-$password   = "Beeuhpxccux8-";
-$dbname     = "nes27_railview";
+require './config.php';
 
 $conn = new mysqli($servername, $username, $password, $dbname);
 

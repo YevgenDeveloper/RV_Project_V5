@@ -25,13 +25,8 @@ const ModalAliases = (props: Props) => (
       </div>
     </div>
     <div className={styles.aliases}>
-      {props.aliases.map(alias => (
-        <button
-          key={alias}
-          type="button"}
-        >
-        {alias}
-        </button>
+      {props.aliases.map(ride => (
+        <div>{ride}</div>
       ))}
     </div>
   </Modal>
