@@ -28,14 +28,17 @@ export function logout() {
 }
 
 export async function getRidesList() {
-  const res = await fetch(`https://www.railview.eu/viewer/getImageList.php`, {
-    method: 'GET',
-    headers: {
-      Accept: 'application/json',
-      'Content-Type': 'application/json',
+  const res = await fetch(
+    `https://railvieweu.dev-test.pro/backend/databaselogic.php`,
+    {
+      method: 'GET',
+      headers: {
+        Accept: 'application/json',
+        'Content-Type': 'application/json',
+      },
     },
-  });
-  const result = await res;
+  );
+  const result = await res.json();
   return result;
 }
 
