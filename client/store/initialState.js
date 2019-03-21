@@ -2,38 +2,16 @@
 
 import type { StateType } from 'client/types';
 
-import { cameras, playModes, drawTools, bdConnectUrl } from 'client/constants';
+import { cameras, playModes, drawTools } from 'client/constants';
 
-console.log(bdConnectUrl);
 const initialState: StateType = {
   isLoading: true,
   isFirstStart: true,
   modal: undefined,
   notification: undefined,
   view: undefined,
-  rides: [
-    'Gd_Apn',
-    'Ehv_Ut',
-    'Ledn_Shl',
-    'Apn_Ledn',
-    'Gd_Wad',
-    'Gvc_Wd',
-    'Hlm_Gvc',
-    'Ledn_Wd',
-    'Nwk_Gd',
-    'Sdm_Vh',
-    'Shl_Ledn',
-    'Wd_Nwk',
-    'Ut_Ehv',
-    'Btl_Gz',
-    'Gz_Btl',
-    'Gz_Nml',
-    'Nml_Gz',
-    'Ldm_Gdm',
-    'Gdm_Ti',
-    'Ti_Gdm',
-    'Gdm_Ldm',
-  ],
+  rides: ['Gd_Apn', 'Ledn_Wd'],
+  aliases: ['test1', 'test2', 'test'],
   currentRide: 'Ledn_Wd',
   players: [
     {

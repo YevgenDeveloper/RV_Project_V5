@@ -6,6 +6,7 @@ import { Modal, Button } from 'client/components';
 import styles from './styles.css';
 
 type Props = {
+  aliases: string[],
   close: void => void,
 };
 
@@ -22,6 +23,16 @@ const ModalAliases = (props: Props) => (
         />
         <input type="text" />
       </div>
+    </div>
+    <div className={styles.aliases}>
+      {props.aliases.map(alias => (
+        <button
+          key={alias}
+          type="button"}
+        >
+        {alias}
+        </button>
+      ))}
     </div>
   </Modal>
 );

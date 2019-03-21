@@ -125,6 +125,15 @@ const reducerLoadRides = (
   isLoading: false,
 });
 
+const reducerLoadAliases = (
+  state: StateType,
+  action: { payload: { aliases: string[] } },
+) => ({
+  ...state,
+  ...action.payload,
+  isLoading: false,
+});
+
 const reducerAnnotationTool = (
   state: StateType,
   action: { payload: { drawTool: string } },
@@ -146,6 +155,7 @@ export default createReducer({
   [types.FAILURE]: reducerFailure,
   [types.LOAD]: reducerLoad,
   [types.LOAD_RIDES]: reducerLoadRides,
+  [types.LOAD_ALIASES]: reducerLoadAliases,
   [types.MODAL_OPEN]: reducerModal,
   [types.MODAL_CLOSE]: reducerModal,
   [types.NOTIFICATION_SHOW]: reducerNotification,
