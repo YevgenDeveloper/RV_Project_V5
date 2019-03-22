@@ -27,15 +27,18 @@ export function logout() {
   localStorage.removeItem(storageNames.AUTH_TOKEN);
 }
 
-export async function addAlias(name) {
-  const res = await fetch(`https://railvieweu.dev-test.pro/backend/alias.php`, {
-    method: 'POST',
-    headers: {
-      Accept: 'application/json',
-      'Content-Type': 'application/json',
+export async function addAlias(name: string) {
+  console.log(name);
+  const res = await fetch(
+    `https://railvieweu.dev-test.pro/backend/alias.php?aliasname=${name}`,
+    {
+      method: 'GET',
+      headers: {
+        Accept: 'application/json',
+        'Content-Type': 'application/json',
+      },
     },
-    data: name,
-  });
+  );
   console.log(res);
 }
 
