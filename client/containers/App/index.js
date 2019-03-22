@@ -66,6 +66,7 @@ class App extends Component<Props, State> {
           <ModalAliases
             aliases={this.props.aliases}
             close={this.props.toggleModal}
+            addAlias={this.props.addAlias}
           />
         );
       case modals.BOOKMARKS:
@@ -117,7 +118,7 @@ class App extends Component<Props, State> {
       : undefined;
 
     const imageGateUrl = getImageGateUrl(imageUrl);
-    console.log(imageGateUrl);
+
     switch (view) {
       case views.ANNOTATION:
         return (

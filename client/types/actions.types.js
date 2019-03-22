@@ -9,6 +9,7 @@ export type ActionType = {
   navigate: BookmarkType => void,
   changeView: (view?: string) => void,
   changeRide: (ride: string) => void,
+  addAlias: (alias: string) => void,
   toggleNotification: (notification?: string) => void,
   updatePlayer: (playerIndex: number, payload: {}) => void,
   annotate: void => void,
