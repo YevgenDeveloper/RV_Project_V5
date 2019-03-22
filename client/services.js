@@ -27,6 +27,18 @@ export function logout() {
   localStorage.removeItem(storageNames.AUTH_TOKEN);
 }
 
+export async function addAlias(name) {
+  const res = await fetch(`https://railvieweu.dev-test.pro/backend/alias.php`, {
+    method: 'POST',
+    headers: {
+      Accept: 'application/json',
+      'Content-Type': 'application/json',
+    },
+    data: name,
+  });
+  console.log(res);
+}
+
 export async function getRidesList() {
   const res = await fetch(
     `https://railvieweu.dev-test.pro/backend/databaselogic.php`,

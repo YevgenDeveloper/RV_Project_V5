@@ -8,7 +8,7 @@ import { bindActionCreators } from 'redux';
 import { purgeStoredState } from 'redux-persist';
 import { persistConfig } from 'client/store/persist';
 import { views, modals } from 'client/constants';
-import { getImageUrl, getImageGateUrl } from 'client/services';
+import { getImageUrl, getImageGateUrl, addAlias } from 'client/services';
 import {
   Annotation,
   Measurement,
@@ -62,11 +62,12 @@ class App extends Component<Props, State> {
         );
 
       case modals.ALIASES:
+        console.log(this.props);
         return (
           <ModalAliases
             aliases={this.props.aliases}
             close={this.props.toggleModal}
-            addAlias={this.props.addAlias}
+            addAlias={addAlias}
           />
         );
       case modals.BOOKMARKS:

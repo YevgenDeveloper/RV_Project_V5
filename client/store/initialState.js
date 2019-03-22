@@ -7,6 +7,7 @@ import { cameras, playModes, drawTools } from 'client/constants';
 const initialState: StateType = {
   isLoading: true,
   isFirstStart: true,
+  currentUser: 'admin',
   modal: undefined,
   notification: undefined,
   view: undefined,
