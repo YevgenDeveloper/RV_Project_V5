@@ -17,6 +17,7 @@ type State = {
   password: string,
   isRequest: boolean,
   errorMessage: string,
+  currentUser: string,
 };
 
 export default class Login extends Component<{}, State> {
@@ -27,6 +28,7 @@ export default class Login extends Component<{}, State> {
     password: '',
     isRequest: true,
     errorMessage: '',
+    currentUser: '',
   };
 
   componentDidMount() {
@@ -38,7 +40,6 @@ export default class Login extends Component<{}, State> {
   }
 
   handelChange = (key, value) => {
-    console.log(value);
     const state = Object.assign({}, this.state);
 
     state[key] = value;
@@ -55,8 +56,11 @@ export default class Login extends Component<{}, State> {
   // };
 
   handleSubmit = () => {
+    // this.setState({ isRequest: true });
     const value = this.state;
     login(value);
+    this.setState({ currentUser: 'test' });
+    this.timeout = setTimeout(() => window.location.reload(), 1500);
   };
 
   timeout: TimeoutID;

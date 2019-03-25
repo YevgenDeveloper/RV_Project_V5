@@ -35,7 +35,13 @@ export async function login(value: array) {
   );
   const result = await res.text();
   console.log(result);
-  // localStorage.setItem(storageNames.AUTH_TOKEN, 'Tmp token');
+  if (result === 'valid') {
+    localStorage.setItem(storageNames.AUTH_TOKEN, 'Tmp token');
+    localStorage.setItem('Current_user', email);
+    return result;
+  }
+  localStorage.removeItem('Current_user');
+  return result;
 }
 
 export function logout() {
