@@ -4,5 +4,27 @@ require './config.php';
 
 $conn = new mysqli($servername, $username, $password, $dbname);
 
-var_dump($_GET);exit();
-$sql="SELECT DISTINCT gebied FROM ritten";
+$email = $_GET['email'];
+$loginpass = $_GET['password'];
+
+$sql = "SELECT passwordhash FROM users WHERE username = '" . $email . "'";
+
+$query = mysqli_query($conn, $sql);
+
+$output = array();
+while ($row = mysqli_fetch_assoc($query)) {
+    array_push($output, $row['passwordhash']);
+}
+$currentpass = $output[0];
+
+header('Content-Type: application/text');
+
+if ($query->num_rows == 0) {
+    echo "User does not exist";
+} else {
+    if ($loginpass == $currentpass) {
+        echo 'valid';
+    } else {
+        echo 'Wrong password';
+    }
+}

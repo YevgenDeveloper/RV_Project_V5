@@ -24,16 +24,17 @@ export async function login(value: array) {
   const password = value.password;
 
   const res = await fetch(
-    `https://railvieweu.dev-test.pro/backend/auth.php?email=${email}&pass=${password}`,
+    `https://railvieweu.dev-test.pro/backend/auth.php?email=${email}&password=${password}`,
     {
       method: 'GET',
       headers: {
-        Accept: 'application/json',
-        'Content-Type': 'application/json',
+        Accept: 'application/text',
+        'Content-Type': 'application/text',
       },
     },
   );
-  console.log(res);
+  const result = await res.text();
+  console.log(result);
   // localStorage.setItem(storageNames.AUTH_TOKEN, 'Tmp token');
 }
 
