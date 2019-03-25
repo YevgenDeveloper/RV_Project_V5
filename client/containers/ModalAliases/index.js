@@ -30,7 +30,7 @@ class ModalAlliases extends Component {
 
   render() {
     const { close, aliases } = this.props;
-
+    console.log(aliases);
     return (
       <Modal close={close}>
         <div className={styles.header}>
@@ -50,8 +50,8 @@ class ModalAlliases extends Component {
           </div>
         </div>
         <div className={styles.aliases}>
-          {aliases.map(ride => (
-            <div>{ride}</div>
+          {aliases.map(alias => (
+            <div>{alias}</div>
           ))}
         </div>
       </Modal>
@@ -59,37 +59,3 @@ class ModalAlliases extends Component {
   }
 }
 export default ModalAlliases;
-// export default function ModalAliases(props) {
-//   console.log(props);
-//
-//   value = '';
-//
-//   const handleSubmit = event => {
-//     console.log(event.target.value);
-//   };
-//
-//   const handleOnChange = event => {
-//     value = event.target.value;
-//   };
-//   return (
-//     <Modal close={props.close}>
-//       <div className={styles.header}>
-//         <h1>Aliases</h1>
-//         <div className={styles.buttonAdd}>
-//           <Button
-//             blue
-//             label="Add Alias"
-//             className={styles.button}
-//             onClick={handleSubmit}
-//           />
-//           <input type="text" onChange={handleOnChange} />
-//         </div>
-//       </div>
-//       <div className={styles.aliases}>
-//         {props.aliases.map(ride => (
-//           <div>{ride}</div>
-//         ))}
-//       </div>
-//     </Modal>
-//   );
-// }

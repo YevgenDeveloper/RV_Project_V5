@@ -9,6 +9,7 @@ import {
   getImageUrl,
   getImageGateUrl,
   getRidesList,
+  getAliasList,
 } from 'client/services';
 import { modals, cameras, playModes, views } from 'client/constants';
 import * as types from './actionTypes';
@@ -100,6 +101,25 @@ export const getRides = () => async (dispatch: Dispatch) => {
     };
     dispatch({
       type: types.LOAD_RIDES,
+      payload,
+    });
+  } catch (error) {
+    console.error(error);
+    dispatch({
+      type: types.FAILURE,
+      errorMessage: `${error.name}: ${error.message}`,
+    });
+  }
+};
+
+export const getAliases = () => async (dispatch: Dispatch) => {
+  try {
+    dispatch({ type: types.REQUEST });
+    const payload = {
+      aliases: await getAliasList(),
+    };
+    dispatch({
+      type: types.LOAD_ALIASES,
       payload,
     });
   } catch (error) {

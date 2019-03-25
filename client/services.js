@@ -63,6 +63,21 @@ export async function addAlias(name: string) {
   console.log(res);
 }
 
+export async function getAliasList() {
+  const res = await fetch(
+    `https://railvieweu.dev-test.pro/backend/getalias.php`,
+    {
+      method: 'GET',
+      headers: {
+        Accept: 'application/json',
+        'Content-Type': 'application/json',
+      },
+    },
+  );
+  const result = await res.json();
+  return result;
+}
+
 export async function getRidesList() {
   const res = await fetch(
     `https://railvieweu.dev-test.pro/backend/databaselogic.php`,

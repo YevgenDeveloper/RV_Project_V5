@@ -43,6 +43,7 @@ class App extends Component<Props, State> {
   componentDidMount() {
     this.props.load();
     this.props.getRides();
+    this.props.getAliases();
   }
 
   componentWillUnmount() {

@@ -9,8 +9,6 @@ import styles from './styles.css';
 const cx = classnames.bind(styles);
 
 type Props = {
-  rides: string[],
-  currentRide: string,
   close: void => void,
   onChangeRide: (ride: string) => void,
 };
