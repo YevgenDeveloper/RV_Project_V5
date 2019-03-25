@@ -1,0 +1,47 @@
+@import 'client/styles/variables';
+
+.header {
+    display: block;
+    margin-bottom: 20px;
+
+h1 {
+    margin-bottom: 0;
+}
+
+.buttonAdd {
+    height: 32px;
+    margin-top: 20px;
+    overflow: hidden;
+    position: relative;
+    margin-left: auto;
+
+.button {
+    z-index: 1;
+}
+
+input {
+    border: 1px solid lightblue;
+    border-radius: 5px;
+    margin-left: 20px;
+    padding: 6px;
+}
+}
+}
+
+.aliases {
+    display: flex;
+    flex-flow: row wrap;
+}
+
+.alias {
+    width: 100%;
+    padding: 15px 0;
+    display: block;
+    text-align: left;
+    cursor: pointer;
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+
+&:last-child {
+     border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+ }
+}

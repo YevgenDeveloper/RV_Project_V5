@@ -61,6 +61,7 @@ export async function addAlias(name: string) {
     },
   );
   console.log(res);
+  window.location.reload();
 }
 
 export async function getAliasList() {

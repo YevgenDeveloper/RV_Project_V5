@@ -30,7 +30,6 @@ class ModalAlliases extends Component {
 
   render() {
     const { close, aliases } = this.props;
-    console.log(aliases);
     return (
       <Modal close={close}>
         <div className={styles.header}>
@@ -44,6 +43,7 @@ class ModalAlliases extends Component {
             />
             <input
               type="text"
+              className={styles.input}
               onChange={this.handelChange}
               value={this.state.value}
             />
@@ -51,7 +51,7 @@ class ModalAlliases extends Component {
         </div>
         <div className={styles.aliases}>
           {aliases.map(alias => (
-            <div>{alias}</div>
+            <div className={styles.alias}>{alias}</div>
           ))}
         </div>
       </Modal>
