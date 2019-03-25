@@ -49,8 +49,9 @@ export function logout() {
 }
 
 export async function addAlias(name: string) {
+  const email = localStorage.getItem('Current_user');
   const res = await fetch(
-    `https://railvieweu.dev-test.pro/backend/alias.php?aliasname=${name}`,
+    `https://railvieweu.dev-test.pro/backend/alias.php?email=${email}&aliasname=${name}`,
     {
       method: 'GET',
       headers: {
