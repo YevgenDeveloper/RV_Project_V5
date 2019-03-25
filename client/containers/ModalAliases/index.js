@@ -5,11 +5,6 @@ import React, { Component } from 'react';
 import { Modal, Button } from 'client/components';
 import styles from './styles.css';
 
-// type Props = {
-//   aliases: string[],
-//   close: void => void,
-// };
-//
 class ModalAlliases extends Component {
   constructor(props) {
     super(props);
@@ -29,8 +24,6 @@ class ModalAlliases extends Component {
   handleSubmit = () => {
     const { addAlias } = this.props;
     const { value } = this.state;
-
-    console.log(addAlias, typeof addAlias, this.props);
 
     addAlias(value);
   };

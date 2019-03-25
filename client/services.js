@@ -19,8 +19,22 @@ export function isAuthorized() {
   return !!token;
 }
 
-export function login() {
-  localStorage.setItem(storageNames.AUTH_TOKEN, 'Tmp token');
+export async function login(value: array) {
+  const email = value.email;
+  const password = value.password;
+
+  const res = await fetch(
+    `https://railvieweu.dev-test.pro/backend/auth.php?email=${email}&pass=${password}`,
+    {
+      method: 'GET',
+      headers: {
+        Accept: 'application/json',
+        'Content-Type': 'application/json',
+      },
+    },
+  );
+  console.log(res);
+  // localStorage.setItem(storageNames.AUTH_TOKEN, 'Tmp token');
 }
 
 export function logout() {
@@ -28,7 +42,6 @@ export function logout() {
 }
 
 export async function addAlias(name: string) {
-  console.log(name);
   const res = await fetch(
     `https://railvieweu.dev-test.pro/backend/alias.php?aliasname=${name}`,
     {

@@ -37,12 +37,26 @@ export default class Login extends Component<{}, State> {
     clearTimeout(this.timeout);
   }
 
-  handleRequest = () => {
-    this.setState({ isRequest: true });
+  handelChange = (key, value) => {
+    console.log(value);
+    const state = Object.assign({}, this.state);
 
-    login();
+    state[key] = value;
 
-    this.timeout = setTimeout(() => window.location.reload(), 1500);
+    this.setState(state);
+  };
+
+  // handleRequest = () => {
+  //   this.setState({ isRequest: true });
+  //
+  //   login();
+  //
+  //   this.timeout = setTimeout(() => window.location.reload(), 1500);
+  // };
+
+  handleSubmit = () => {
+    const value = this.state;
+    login(value);
   };
 
   timeout: TimeoutID;
@@ -58,14 +72,14 @@ export default class Login extends Component<{}, State> {
             type="email"
             value={this.state.email}
             placeholder="Enter email"
-            onChange={(email: string) => this.setState({ email })}
+            onChange={event => this.handelChange('email', event)}
             disabled={isRequest}
           />
           <Input
             type="password"
             value={this.state.password}
             placeholder="Enter password"
-            onChange={(password: string) => this.setState({ password })}
+            onChange={event => this.handelChange('password', event)}
             disabled={isRequest}
           />
           {errorMessage && <div className={styles.error}>{errorMessage}</div>}
@@ -73,7 +87,7 @@ export default class Login extends Component<{}, State> {
             blue
             label="Submit"
             className={styles.buttonSumit}
-            onClick={this.handleRequest}
+            onClick={this.handleSubmit}
             disabled={isRequest}
           />
           <div className={styles.footer}>
